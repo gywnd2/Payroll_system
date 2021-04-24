@@ -6,7 +6,7 @@
 | 관리자 | 직원이 전송한 사진과 GPS마커를 확인한다. | 직원별 기록 확인 (UC-2) |
 # Traceability Matrix
 
-| Req't    | PW  | UC1 | UC3 |
+| Req't    | PW  | UC1 | UC2 |
 | :------- | :-: | :-: | :-: |
 | FR1      |  1  |  X  |  X  |
 | FR2      |  1  |  X  |  X  |
