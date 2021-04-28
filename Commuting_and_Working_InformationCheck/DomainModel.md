@@ -12,7 +12,6 @@
 | 시스템 내부와 외부 request를 받고 결과를 내보내는 동작을 조절한다. | D    | Controller    |
 | 직원식별번호를 입력받는다.                                         | D    | ID Input      |
 | 입력받은 정보를 담고 있다.                                         | K    | Info         |
-| 타당한 직원 식별번호를 담고 있다.                                  | K    | ID Storage    |
 | 직원 식별번호가 타당한 지 확인한다.                                | D    | ID Checker    |
 | 알람이 울리도록 신호를 조정한다.                                   | D    | AlarmOperator |
 | 시간을 측정한다.                                                   | D    | TimeOperator  |
@@ -28,7 +27,6 @@
 | ID Input < - > Info         | ID를 입력받는다.                  | 확인할 ID 입력      |
 | Info < - > ID Checker          | 정보가 타당한 지 확인하기 위한 정보를 전달 받는다.                  | 확인할 ID 전달      |
 | Controller < - > ID Checker    | 정보를 확인하기 위한 요청을 보낸다.                                 | 요청 보내기         |
-| ID Checker < - > ID Storage    | 올바른 정보인지 확인하기 위해 데이터 저장소를 활용한다.             | 데이터 제공         |
 | CountOperator < - > Controller | 일정한 횟수 이상 잘못 입력하였을 시, 관리자의 입력 권한을 제한한다. | 입력 허가, 제한     |
 | Controller < - > AlarmOperator | 일정한 횟수 이상 잘못 입력하였을 시, 알람이 울린다.                 | 경고음 발생         |
 | Controller < - > TimeOperator  | 일정한 횟수 이상 잘못 입력하였을 시, 입력이 정지될 시간을 측정한다. | 입력 정지 시간 측정 |
@@ -79,8 +77,8 @@
 <br><br>
 ## Traceability Matrix <br>
 ---
-| Use Case | PW | ControllerUC1 | ID Input |     Info    |   ID Storage   |      ID Checker     |  AlarmOperator | TimeOperator | CountOperator |
-|:--------:|:--:|:-----------:|:--------:|:-----------:|:--------------:|:-------------------:|:--------------:|:------------:|:-------------:|
+| Use Case | PW | ControllerUC1 | ID Input |     Info    |      ID Checker     |  AlarmOperator | TimeOperator | CountOperator |
+|:--------:|:--:|:-----------:|:--------:|:--------------:|:-------------------:|:--------------:|:------------:|:-------------:|
 | UC1      | 7  | X           | X        | X           | X              | X                   | X              | X            | X             |
 | UC2      | 12 | X           |          |             |                |                     |                |              |               |
 
