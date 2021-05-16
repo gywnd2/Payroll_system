@@ -55,6 +55,7 @@
 | 입력값에 해당하는 정보를 추출한다.                                          | D    | Database Connection |
 | 웹 페이지 상에서 정보들이 어떻게 배치되어야 하는 지 나타내는 HTML 문서이다. | K    | Interface Page      |
 | HTML 문서를 가져와 웹 상에 보여준다.                                        | D    | PageMaker           |
+|선택한 날짜에 데이터가 존재하지 않으면 경고창을 띄운다.|D|Alert
 
 <br><br> 2. Extracting the Associations<br><br>
 | Concept pair | Association description | Association name |
@@ -62,10 +63,11 @@
 | Calendar < - > DateInfo | 날짜를 선택하여 전달한다. | 날짜 선택 |
 | DateInfo < - > Search Request | 선택한 날짜를 조회 요청에 포함시킨다. | 날짜 전달 |
 | Controller < - > Search Request | 요청된 요구를 받아들이고 보낸다. | 요청 전달 |
-| Controller < - > Database Connection | 직원 식별번호 별로 저장되어 있는 데이터에서 관리자가 입력한 직원의 식별번호에 해당하는 정보를 가져온다. | 해당 데이터 요청 |
+| Controller < - > Database Connection | 직원 식별번호 별로 저장되어 있는 데이터에서 관리자가 입력한 직원의 식별번호에 해당하는 정보가 있다면 가져오고 없으면 신호를 보낸다. | 해당 데이터 요청 |
 | PageMaker < - > Interface Page | HTML 문서에 맞게 웹 페이지 화면을 구성한다. | 웹 페이지 준비 |
 | Database Connection < - > Page Maker | 웹 페이지 상에 올릴 데이터들을 제공한다. | 조회 데이터 제공 |
 | Controller <- > Interface Page | 웹 페이지를 게시하도록 신호를 보낸다. | 게시 |
+|Controller <-> Alert| 조회하고자 하는 날짜에 데이터가 없으면 경고창을 띄운다.| 알림
 
 <br><br> 3. Extracting the Attributes<br><br>
 | Concept | Attributes | Attribute Description |
@@ -82,10 +84,10 @@
 | UC1      | 7  | X           | X        | X           | X              | X                   | X              | X            | X             |
 | UC2      | 12 | X           |          |             |                |                     |                |              |               |
 
-|     Use Case     |  PW  |   DateInfo  | Calendar | ControllerUC2 | Search Request | Database Connection | Interface Page |   PageMaker  |
-|:--------:|:--:|:-----------:|:--------:|:-----------:|:--------------:|:-------------------:|:--------------:|:------------:|
-| UC1      | 7  |             |          |             |                |                     |                |              |
-| UC2      | 12 | X           | X        | X           | X              | X                   | X              | X            |
+|     Use Case     |  PW  |   DateInfo  | Calendar | ControllerUC2 | Search Request | Database Connection | Interface Page |   PageMaker  |Alert|
+|:--------:|:--:|:-----------:|:--------:|:-----------:|:--------------:|:-------------------:|:--------------:|:------------:|:----:|
+| UC1      | 7  |             |          |             |                |                     |                |              | |
+| UC2      | 12 | X           | X        | X           | X              | X                   | X              | X            | X |
 
 <br><br>
 ## Contracts
@@ -98,4 +100,4 @@
 | Operation | 직원별 기록 (GPS, 출퇴근 사진) |
 |:---------:|:------------------------------:|
 | Preconditions       | None                              |
-| Postconditions       | UC1을 통해 입력한 직원 식별번호가 유효한지 검증하고, <br>그렇다면 선택한 날짜의 출퇴근 기록(사진, 위치)을 보여준다.                              |
+| Postconditions       | UC1을 통해 입력한 직원 식별번호가 유효한지 검증하고, <br>선택한 날짜의 출퇴근 기록(사진, 위치)가 있다면 보여준다.

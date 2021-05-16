@@ -65,7 +65,7 @@ UC 2, 4 (삭제, 검색)
 -----------------------------
 | Concept pair |	Association description |	Association name |
 | :----------: | :----------------------- | :--------------: |
-|Request <-> controller	수행할 request가 controller에게 전달된다.	Convey request
+|Request <-> controller |	수행할 request가 controller에게 전달된다.	| Convey request
 |Login checker <-> controller	| Login checker는 controller에게 관리자 계정으로 로그인이 되어있는지 확인하기 위한 request를 보낸다. |	Login check request
 |Login checker <-> controller	| 로그인이 되어있는지 확인한 결과를 controller에게 보낸다. |	verify
 |Controller <-> Page Maker	| Input data를 입력 받기 위한 창을 화면에 띄우기 위해 Controller는 page maker에게 request를 보낸다.	| Input request

@@ -39,5 +39,6 @@
 | Actor's Goal          | 직원이 전송한 GPS마커와 출퇴근 사진기록을 확인  |
 | Participating Actors                                      | Database                                                                                                                                                                                                       |
 | Preconditions                                             | 직원이 전송한 GPS마커와 출퇴근 사진기록이<br>시스템에 저장되어 있다.                                                                                                                                           |
-| Postconditions                                            | 입력한 식별번호가 맞으면 선택했던 메뉴의<br>다음화면으로 진행할 수 있다.                                                                                                                                       |
-|<br> Flow of Events for Main Success Scenario <br><br><br><br> | → &nbsp;&nbsp;1. <U>직원식별번호 검증, 확인 (UC-1) 포함</U><br>← &nbsp;&nbsp;2. 저장된 GPS마커는 지도에 동선으로 표시하고<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사진을 함께 표시한다. |
+| Postconditions                                            |입력한 날짜에 데이터가 존재하면 표시한다.                                                                                |
+|<br> Flow of Events for Main Success Scenario <br><br><br><br> | → &nbsp;&nbsp;1. <U>직원식별번호 검증, 확인 (UC-1) 포함</U>&nbsp;&nbsp;<br>←&nbsp;&nbsp;&nbsp;2. 조회할 날짜를 선택한다.<br>←&nbsp;&nbsp;&nbsp;3. 저장된 GPS마커는 지도에 동선으로 표시하고<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사진을 함께 표시한다. |
+|Flow of Events For Extension(Alternate Scenarios):|<br>2a. 선택한 날짜에 유효한 데이터가 없을 경우 :<br>← 1. 선택한 날짜에 데이터가 없음을 알리는 경고창을<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 표시한다.<br>← 2. 조회할 날짜를 다시 입력받는다.

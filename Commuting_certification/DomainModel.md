@@ -50,6 +50,8 @@ Gps를 통해 좌표정보를 받아온다 | D | GpsEntry
 ### 2. Extracting the Associations
 Concept   pair | Association   Description | Association   name
 -- | -- | --
+Controller <-> CameraEnrty | 카메라에게 사진을 촬영할것을 요청한다 | Convey request
+Controller <-> GpsEnrty | Gps에게 좌표를 보내줄것을 요청한다 | Convey request
 CameraEntry <-> AuthInfo | 카메라를 통해 촬영한 얼굴사진을    AuthInfo로 넣는다 | Convey data
 GpsEntry <-> AuthInfo | Gps를 통해 받아온 위치정보를    AuthInfo로 넣는다 | Convey data
 AuthInfo <-> Controller | 입력받은 인증정보를 컨트롤러로 전달한다 | Conveys data
