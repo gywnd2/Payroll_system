@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Location</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Managing Staff System</h1>
+    <div>
+        <button type="button"  id="backButton" onclick="
+        alert('메인 메뉴로 이동하게 됩니다.');">
+        <img src="./img/back.png" height="60px" width="60px"></button>
+    </div>
+    <div id="dateLabel">Date: <input type="date" name="requestDate" size="40"></div>
+    <div id="idLabel" >ID : <input type="text" name="idNum" size="20"></div>
+    <div style="text-align: center;">
+        <button type="submit" id="okButton" onclick="
+        alert('UC1에서 유효한 식별번호임이 확인 되었을 시 이동');
+        location.href='showResult.html';">
+        <img src="./img/ok.png" height="80px" width="80px"></button>
+    </div>
+</body>
+</html>

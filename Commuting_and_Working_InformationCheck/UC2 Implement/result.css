@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    font-size:50px;
+    padding-bottom: 25px;
+    border-bottom: 10px solid gray;
+}
+
+#backButton{
+    float: left;
+    border: 0px;
+    background-color: white;
+}
+
+#okButton{
+    text-align: center;
+    border: 0px;
+    background-color: white;
+}
+
+#message{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size:30px;
+}
+
+#historyView{
+    margin-top: 8%;
+}
+
+.commutePic{
+    margin-left: 20%;
+}
+
+.picLabel{
+    margin-left: 30%;
+    margin-right:30%;
+}
+
+.lables{
+    margin-bottom: 20px;
+    font-size: 30px;
+}

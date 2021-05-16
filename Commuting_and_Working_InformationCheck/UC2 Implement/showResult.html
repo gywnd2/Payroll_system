@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View history</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <div id="map"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dfb46183fb2792df18c5a03f5644a6e0">
+    </script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.50483, 126.95507),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+    </script>
+    <h1>Managing Staff System</h1>
+    <div id="backButton">
+        <button type="button" id="backButton" onclick="location.href='checkLocationMain.html'">
+            <img src="./img/back.png" height="60px" width="60px"></button>
+    </div>
+    <div id="message">(ID) 사원의 (YYYY-MM-DD) 출, 퇴근 기록입니다.</div>
+    <div id="historyView">
+        <div class="lables"><span class="picLabel">사진</span><span class="mapLabel">위치 기록</span></div>
+        <img src="./img/test.png" class="commutePic" alt="" width="300" height="350">
+    </div>
+    
+</body>
+
+</html>
