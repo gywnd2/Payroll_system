@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    font-size:50px;
+    padding-bottom: 25px;
+    border-bottom: 10px solid gray;
+}
+
+#backButton{
+    float: left;
+    border: 0px;
+    background-color: white;
+}
+
+#okButton{
+    text-align: center;
+    border: 0px;
+    background-color: white;
+}
+
+#message{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size:30px;
+}
+
+#historyView{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 400px 100px 400px;
+    grid-template-rows: 50px 400px 50px;
+    justify-content: center;
+}
+
+.label{
+    font-size: 30px;
+    text-align: center;
+}
+
+#viewAllMarkers{
+    font-size: 20px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Payroll_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "controller.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongyaho/Payroll_system"
+  },
+  "author": "",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
